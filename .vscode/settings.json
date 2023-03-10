@@ -12,6 +12,7 @@
     ".vscode/blueprint-templates",
   ],
   "cSpell.words": [
+    "ahooks",
     "svgr",
     "tailwindcss"
   ],

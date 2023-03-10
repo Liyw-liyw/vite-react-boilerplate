@@ -4,4 +4,3 @@ package.json
 *.d.ts
 .eslintrc.cjs
 tsconfig.json
-.vscode/blueprint-templates

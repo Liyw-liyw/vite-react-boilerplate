@@ -1,32 +1,23 @@
-import { useState } from 'react';
-import './App.less';
-import { ReactComponent as ReactLogo } from '@/assets/react.svg';
-import { appName } from '@/assets/test.json';
+import { useUpdateEffect } from 'ahooks';
+import { Route, Routes, useLocation } from 'react-router-dom';
+import { Layout } from './components/Layout';
+import ErrorPage from './pages/errorPage';
+import Home from './pages/home';
 
 function App() {
-  const [count, setCount] = useState(0);
+  const { pathname } = useLocation();
+
+  useUpdateEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [pathname]);
 
   return (
-    <div className="App">
-      <div className="flex items-center justify-center gap-4">
-        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-          <img src="/vite.svg" className="w-8 animate-bounce" alt="Vite logo" />
-        </a>
-        <ReactLogo className="animate-spin" />
-      </div>
-      <h1 className="my-8">{appName}</h1>
-      <div className="mb-8">
-        <button className="mb-4" onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p className="mb-4">
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="text-[#888] hover:text-black">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
+    </Layout>
   );
 }
 

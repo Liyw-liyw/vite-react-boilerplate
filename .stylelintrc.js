@@ -20,6 +20,10 @@ module.exports = {
       {
         ignoreAtRules: ['tailwind']
       }
+    ],
+    'selector-class-pattern': [
+      '^([a-zA-Z][a-zA-Z0-9]*)(-[a-zA-Z0-9]+)*$',
+      { resolveNestedSelectors: true }
     ]
   },
   overrides: [
