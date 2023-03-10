@@ -2,6 +2,7 @@ import { resolve } from 'path';
 import react from '@vitejs/plugin-react';
 import { defineConfig, normalizePath } from 'vite';
 import viteEslint from 'vite-plugin-eslint';
+import svgr from 'vite-plugin-svgr';
 
 // 全局 less 文件的路径
 // 用 normalizePath 解决 window 下的路径问题
@@ -13,7 +14,8 @@ export default defineConfig({
     react(),
     viteEslint({
       exclude: ['**/*.spec.ts']
-    })
+    }),
+    svgr()
   ],
   css: {
     preprocessorOptions: {
