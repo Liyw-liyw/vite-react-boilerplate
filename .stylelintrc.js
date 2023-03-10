@@ -14,9 +14,15 @@ module.exports = {
   // 配置 rules
   rules: {
     // 开启 Prettier 自动格式化功能
-    'prettier/prettier': true
+    'prettier/prettier': true,
+    'at-rule-no-unknown': [
+      true,
+      {
+        ignoreAtRules: ['tailwind']
+      }
+    ]
   },
-   overrides: [
+  overrides: [
     {
       files: ['**/*.less'],
       customSyntax: 'postcss-less',
