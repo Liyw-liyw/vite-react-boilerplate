@@ -15,13 +15,14 @@
   vscode-blueprint-templates;
   eslint + prettier + stylelint代码规范;
   husky + lint-staged + commitlint 的 Git 提交工作流集成
-- 封装实用 axios 请求
-- api请求模拟(axios-mock-adapter)
 - 添加ahooks, 适用各种常用的hook场景，避免重复引用和造轮子
+- api请求模拟(axios-mock-adapter)
+- 封装实用 axios 请求, 通过 swagger-axios-codegen 将swagger文档中的api快速转为可调用的class方法
 
 ## 参考
 - Tailwind常用组件案例：https://www.hyperui.dev/
 - Ahooks常用hook使用：https://ahooks.js.org/zh-CN/guide
+- swagger api快速转换：见 [api-generator.mjs](./src/api/api-generator.mjs)
 - api请求模拟：[axios-mock-adapter](https://github.com/ctimmerm/axios-mock-adapter)
 
 ## 支持环境

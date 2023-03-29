@@ -7,6 +7,7 @@
     "start": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
+    "generateApi": "node ./src/api/api-generator.mjs",
     "lint": "npm run lint:script && npm run lint:style",
     "lint:script": "eslint --ext .js,.jsx,.ts,.tsx --fix --quiet ./",
     "lint:style": "stylelint --fix \"src/**/*.{css,less}\""
@@ -23,10 +24,14 @@
   },
   "dependencies": {
     "ahooks": "^3.7.5",
+    "axios": "^1.3.4",
+    "axios-mock-adapter": "^1.21.3",
     "classnames": "^2.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.8.2"
+    "react-router-dom": "^6.8.2",
+    "store2": "^2.14.2",
+    "swagger-axios-codegen": "^0.15.11"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.4",
