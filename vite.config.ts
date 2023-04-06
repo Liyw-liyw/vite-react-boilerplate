@@ -15,7 +15,7 @@ export default defineConfig({
     viteEslint({
       exclude: ['**/*.spec.ts']
     }),
-    svgr()
+    svgr() // SVG 组件加载 import { ReactComponent as ReactLogo } from '@/assets/react.svg';
   ],
   css: {
     preprocessorOptions: {

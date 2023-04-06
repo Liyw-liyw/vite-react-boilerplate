@@ -19,7 +19,9 @@ function Home(props: homeProps) {
         <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
           <img src="/vite.svg" className="w-8 animate-bounce" alt="Vite logo" />
         </a>
-        <ReactLogo className="animate-spin" />
+        <a href="https://react.dev/" target="_blank" rel="noreferrer">
+          <ReactLogo className="animate-spin" />
+        </a>
       </div>
       <h1 className="my-8">{appName}</h1>
       <div className="mb-8">

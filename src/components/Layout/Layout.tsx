@@ -15,7 +15,7 @@ export function Layout(props: LayoutProps) {
   return (
     <div className={cn(styles.Layout, 'h-screen w-screen', className)}>
       <Header />
-      <div className="container">{children}</div>
+      <main className="container">{children}</main>
     </div>
   );
 }
